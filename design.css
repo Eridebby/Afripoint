@@ -1,0 +1,424 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow-x: hidden;
+      font-family: Arial, sans-serif;
+  } */
+  
+  /* Ensure the body takes full width and height */
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background-image: url('https://s3-alpha-sig.figma.com/img/6048/58ab/2f37912a9577dcf49043b3b345b6cd27?Expires=1733097600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=RrvAK3sXh74r7XRT9ZHCqgkD1tVFikQLVJWn6b-dskfcpDHAaeAhUADJ0A8SVXBJOsZr6VBJbBTZArKOjLq2kV8iACIs25t1kEYrE~j95OTCZVwKKO0IeLQQglvUrWqWT2ot20W17LKlX6XsvpQgHQOWo4rsrW8Rbb2wTNDG3OB4F~107ngscN~FZYNSuzBSemi-fW4J9WmSM~QGQ8kPzFwRw5TKEeDC~mioUX4KVG0gtTGXaALJG96JWbdgWDgG62Zp0iIc9fbF08NODEv~XQZe2VF12-q28XQe~PCJLPs~C~Q928CxrtcJG4Nd4DXc77kfAaIxsMDNAD4FUnfY2A__');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+  }
+  
+  .hero-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    margin-left: 50px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+  }
+  
+  .hero-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  
+  .hero-content p {
+    margin-top: 15px;
+    line-height: 1.8;
+  }
+  
+  .hero-content .btn {
+    margin-top: 20px;
+  }
+  
+  .stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .stat-item {
+    text-align: start;
+    position: relative;
+    padding: 25px;
+  }
+  
+  .number {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .text {
+    font-size: 1rem;
+    margin-top: 2px;
+  }
+  
+  /* Add straight lines in between items */
+  .stats .stat-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: -10px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: white;
+  }
+  
+  
+  /* Navbar Styles */
+  .navbar {
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+  }
+  
+  .navbar .nav-link {
+    color: black !important;
+    transition: transform 0.3s ease, color 0.3s ease;
+    margin-right: 20px; 
+  }
+  
+  .navbar .nav-link:hover,
+  .navbar .nav-link.active {
+    color: #212529;
+    transform: translateY(-3px);
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+  }
+  
+  .navbar-toggler {
+    border: none;
+  }
+  
+  .navbar .btn {
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  
+  /* Custom button style for white background with black text */
+  .btn-white-black {
+    background-color: white !important;
+    color: black !important;
+  }
+  
+  .btn-white-black:hover {
+    background-color: black !important;
+    color: white !important;
+  }
+  
+  .btn.btn-primary {
+    background-color: transparent;
+    color: black;
+    border: none;
+  }
+  
+  .btn.btn-primary:hover {
+    background-color: transparent;
+    color: black;
+  }
+  
+  .ml-custom {
+    padding-left: 70px;
+    width: 500px;
+  }
+  
+  /* Features Section */
+  .features-section {
+    background-color: #212529;
+    color: white;
+    padding: 50px 20px;
+  }
+  
+  /* About Section */
+  .about-section {
+    padding: 50px 20px;
+    margin-top: 50px;
+  }
+  
+  .about-section img {
+    max-width: 100%;
+    border-radius: 5px;
+  }
+  
+  .collections-section .row .col-md-4:last-child .img-fluid {
+    height: 39rem;
+    object-fit: cover;
+  }
+  
+  .image-container {
+    position: relative;
+  }
+  
+  .overlay-text {
+    position: absolute;
+    bottom: 35px;
+    left: 10px;
+    color: black;
+    font-size: 1rem;
+    font-weight: 600;
+    background: rgba(244, 244, 244, 0.8);
+    padding: 5px;
+  }
+  
+  .left,
+  .right {
+    font-size: 1rem;
+    color: white;
+    border: 1px solid white;
+    border-radius: 100%;
+    padding: 8px;
+    transition: color 0.3s, border-color 0.3s;
+  }
+  
+  .left:hover,
+  .right:hover {
+    color: black;
+    border-color: white;
+    background-color: white;
+  }
+  
+  .move-arrow {
+    position: relative;
+    margin-top: 3rem;
+    margin-left: 5rem;
+  }
+  
+  .testimonials-section {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+    position: relative;
+    overflow: hidden;
+    margin-top: 50px; /* Add space */
+  }
+  
+  .testimonials-section .row {
+    position: relative;
+  }
+  
+  .testimonial-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    text-align: start;
+  }
+  
+  .testimonial-card p {
+    margin: 0 0 10px;
+  }
+  
+  .testimonial-card p strong {
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  
+  .testimonials-section h2 {
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+  }
+  
+  /* Fading effect for the last testimonials */
+  .testimonials-section .row::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to bottom, rgba(249, 249, 249, 0) 0%, rgba(249, 249, 249, 1) 100%);
+  }
+  
+  .newest-drop .container {
+    position: relative;
+  }
+  
+  .newest-drop img.img-fluid {
+    width: 100%;
+    height: auto;
+  }
+  
+  .overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: start;
+    z-index: 2;
+  }
+  
+  .overlay-content h3,
+  .overlay-content h4 {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .overlay-content .btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+  }
+  
+  .faqs-section {
+    background-color: #F5F5F5;
+    margin-top: 50px; 
+  }
+  
+  .faq-section {
+    max-width: 800px;
+    background-color: transparent !important;
+  }
+  
+  /* Remove the default Bootstrap arrow */
+  .accordion-button::after {
+    content: none !important;
+  }
+  
+  /* Add custom + and - signs */
+  .accordion-button {
+    position: relative;
+    padding-right: 2rem;
+  }
+  
+  .accordion-button::before {
+    content: "+";
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: absolute;
+    right: 1rem;
+    color: #333;
+  }
+  
+  .accordion-button:not(.collapsed)::before {
+    content: "-";
+  }
+  
+  /* Style the accordion button appearance */
+  .accordion-button {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 1rem;
+    text-align: left;
+    padding: 1rem 1.5rem;
+  }
+  
+  /* Optional: Add border between items */
+  .accordion-item {
+    border: none;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Style the accordion body */
+  .accordion-body {
+    font-size: 0.95rem;
+    color: #555;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  
+  h3 {
+    font-size: 1.25rem;
+  }
+  
+  button.btn {
+    padding: 0.5rem 1.5rem;
+    border-radius: 10px;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 1024px) {
+    .collections-section .row .col-md-4:last-child .img-fluid {
+      max-height: 325px;
+    }
+  
+    .overlay-content {
+      position: absolute;
+      top: 50%;
+      left: 35%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: start;
+      z-index: 2;
+    }
+  
+    .move-arrow {
+      margin-top: 3rem;
+      margin-left: 3rem;
+    }
+    .hero-content {
+        
+        max-width: 600px;
+        border-radius: 5px;
+      }
+      
+      .hero-content h1 {
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+      
+      .hero-content p {
+        margin-top: 15px;
+        line-height: 1;
+      }
+      
+      .hero-content .btn {
+        margin-top: 10px;
+      }
+      .stats {
+        display: block;
+        align-items: center;
+      }
+      .about-text{
+        margin-top: 50px;
+      }
+      
+  }
+  
+  
